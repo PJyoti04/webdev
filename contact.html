@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <div class="nav">
+        <h1 class="head">Contact Us</h1>
+    </div>
+    <div class="container">
+        <div class="form">
+            <form action="contact.php">
+                <div class="fill">
+                    <label for="name">Username</label><br>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="fill">
+                    <label for="email">Email</label><br>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="fill">
+                    <label for="phone">Mobile No.</label><br>
+                    <input type="text" id="phone" name="phone">
+                </div>
+                <div class="fill">
+                    <label for="message">Message</label><br>
+                    <textarea id="message" name="message" cols="80" rows="10" required></textarea>
+                </div>
+                <br>
+                <div class="last">
+                    <input class="sub" type="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

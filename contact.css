@@ -36,13 +36,14 @@ html,body{
 }
 
 input{
-    /* padding-top: 20px; */
     width: 500px;
     height: 35px;
     border: 2px solid black;
     border-radius: 20px;
     margin-left: 8px;
     margin-top: 5px;
+    font-size: 15px;
+    font-weight: 700;
 
 }
 label{
@@ -71,6 +72,13 @@ textarea{
     border: 2px solid black;
     border-radius: 15px;
     width:500px ;
+    height: 180px;
     margin-left: 8px;
     margin-top: 5px;
+    padding: 20px;
+    font-size: 15px;
+    font-weight: 700;
+}
+#name,#phone,#email{
+    padding:20px;
 }

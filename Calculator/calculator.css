@@ -1,0 +1,95 @@
+.container{
+    width: 500px;
+    height: 600px;
+    border: 5px solid rgb(115, 112, 112);
+    border-radius: 30px;
+    background-color: rgb(84, 83, 83);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#display{
+    width: 480px;
+    height: 120px;
+    margin-top: 20px;
+    padding: 3px;
+    border: 2px solid black;
+    border-radius: 20px;
+    background-color: azure;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+    font-size: 45px;
+    font-weight: 600;
+    overflow:hidden;
+}
+.cal{
+    width: 480px;
+    height: 450px;
+    border: 1px solid ;
+    border-radius: 20px;
+    margin-top:30px ;
+    padding: 30px 10px;
+    display: grid;
+    /* grid-template-columns:auto auto auto auto; */
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 25px;
+    background-color: rgb(44, 42, 42);
+}
+.grid-items{
+    /* height: 50px;
+    width: 80px; */
+    border-radius: 24px;
+    font-size: 18px;
+    font-weight: 800;
+    border: 2px solid rgb(180, 125, 125);
+    background-color: rgba(214, 177, 177, 0.785);
+    text-align: center;
+}
+
+.grid-items:hover{
+    background-color: rgb(132, 132, 215);
+    scale: 1.2;
+    border: 2px solid black;
+    color: white;
+}
+.equal{
+    /* height: 200px; */
+    grid-area:4/4/span 2/4 ;
+    /* background-color: rgb(246, 117, 12); */
+    background-color: rgba(255, 68, 0, 0.737);
+}
+.clear{
+    background-color: rgb(247, 31, 31);
+}
+.del{
+    color: red;
+}
+body{
+    background-color: black;
+}
+@media (max-width:520px) or (max-height:608px) {
+    .container{
+        width: calc(100% - 20px);
+        height: calc(100% - 10px);
+    }
+    #display{
+        width:calc(100% - 30px) ;
+        height: calc(50% - 50px);
+    }
+    .cal{
+        width: calc(100% - 25px);
+        height: calc(80% - 10px);
+    }
+    .grid-items{
+        border-radius: 100px;
+        font-size:15px ;
+    }
+    
+}

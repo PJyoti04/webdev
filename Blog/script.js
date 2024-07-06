@@ -1,10 +1,10 @@
 document.getElementById("log").addEventListener("click",() =>{
     document.getElementById("login").style.display="block";
     document.getElementById("signin").style.display="none";
-    let x = document.getElementsByTagName("input");
-    for (let i = 0; i < x.length; i++) {
-        x[i].value = "";
-    }
+    document.getElementById("content").style.display="none";
+    document.getElementById("add-blog").style.display="none";
+
+    clearInputs();
     document.getElementById("i-input").addEventListener("click",() =>{
         document.getElementById("signin").style.display="block";
         document.getElementById("login").style.display="none";
@@ -13,17 +13,13 @@ document.getElementById("log").addEventListener("click",() =>{
 
 document.getElementById("cross-login").addEventListener("click",() =>{
     document.getElementById("login").style.display="none";
-    let x = document.getElementsByTagName("input");
-    for (let i = 0; i < x.length; i++) {
-        x[i].value = "";
-    }
+    clearInputs();
+    document.getElementById("content").style.display="block";
 })
 document.getElementById("cross-signin").addEventListener("click",() =>{
     document.getElementById("signin").style.display="none";
-    let x = document.getElementsByTagName("input");
-    for (let i = 0; i < x.length; i++) {
-        x[i].value = "";
-    }
+    clearInputs();
+    document.getElementById("content").style.display="block";
 })
 
 let login = [];
@@ -73,4 +69,69 @@ function clearInputs() {
     for (let i = 0; i < x.length; i++) {
         x[i].value = "";
     }
+}
+
+document.getElementById("add-blog-cross").addEventListener("click",() =>{
+    document.getElementById("add-blog").style.display="none";
+    clearInputs();
+    document.getElementById("blogs").value="";
+    document.getElementById("content").style.display="block";
+})
+
+document.getElementById("txt").addEventListener("click",() =>{
+    document.getElementById("add-blog").style.display="block";
+    // clearInputs();
+    document.getElementById("content").style.display="none";
+    document.getElementById("login").style.display="none";
+    document.getElementById("signin").style.display="none";
+})
+let i = 2;
+document.getElementById("blog-submit").addEventListener("click",() =>{
+    let title = document.getElementById("blogs").value;
+    let image = document.getElementById("image").value;
+    if(title === '' || image === ""){
+        return;
+    }else{
+        addBlog(title, image,i);
+        document.getElementById("add-blog").style.display="none";
+        clearInputs();
+        document.getElementById("blogs").value="";
+        document.getElementById("content").style.display="block";
+        i++;
+    }
+    
+})
+
+function addBlog(title, image,i) {
+    let contentDiv = document.getElementById("content");
+
+    let writingDiv = document.createElement("div");
+    writingDiv.className = "writing";
+
+    let textDiv = document.createElement("div");
+    textDiv.className = "text";
+    textDiv.innerText = title;
+
+    let imgDiv = document.createElement("div");
+    imgDiv.className = "img";
+
+    let img = document.createElement("img");
+    img.src = image;
+    img.alt = "Blog Image";
+
+    if(i % 2 === 0){
+        imgDiv.appendChild(img);
+        writingDiv.appendChild(imgDiv);
+        writingDiv.appendChild(textDiv);
+        contentDiv.appendChild(writingDiv);
+    }else{
+        // writingDiv.appendChild(textDiv);
+        // imgDiv.appendChild(img);
+        // writingDiv.appendChild(imgDiv);
+        contentDiv.appendChild(writingDiv);
+        writingDiv.appendChild(textDiv);
+        writingDiv.appendChild(imgDiv);
+        imgDiv.appendChild(img);
+    }
+    
 }

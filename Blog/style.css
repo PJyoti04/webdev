@@ -42,7 +42,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid white;
+    border: 2px solid white;
     border-radius: 20px;
     height: 35px;
     width: 110px;
@@ -57,7 +57,7 @@ body{
     font-size: 20px;
     font-weight: 900;
 }
-.txt{
+#txt{
     border-right:1px solid white;
     height: inherit;
     display: flex;
@@ -68,7 +68,7 @@ body{
 .add:hover{
     scale: 1.1;
     background-color: black;
-    opacity: 1;
+    opacity: 0.8;
 }
 .nav-item{
     cursor: pointer;
@@ -80,29 +80,34 @@ body{
 #log{
     border: 1px solid white;
     border-radius: 20px;
-    height: 25px;
+    height: 30px;
     width: 60px;
     font-weight: 540;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    /* background-color: azure; */
+    background-color: azure;
+    color: blueviolet;
 }
 #log:hover{
     scale: 1.1;
     border-radius: 20px;
-    border: 2px solid black;
+    border: 2px solid white;
     background-color: wheat;
-    color: blue;
+    color:black;
 }
 .logo{
     padding-left: 40px;
     font-size: 20px;
     font-weight: 700;
     color: white;
+    cursor:pointer;
 }
-form{
+.logo:hover{
+    scale: 1.2;
+}
+form,#add-blog{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -126,7 +131,7 @@ form{
     display:none;
 
 }
-#cross-signin,#cross-login{
+#add-blog-cross,#cross-signin,#cross-login{
     text-align: center;
     /* border: 1px solid; */
     width: 20px;
@@ -135,14 +140,14 @@ form{
     font-weight: 900;
     color: white;
 }
-.signin-header,.login-header{
+.signin-header,.login-header,.add-blog-header{
     font-size: 28px;
     letter-spacing: 1.5px;
     text-align: center;
     color: white;
     font-weight: 800;
 }
-.signin-input,.login-input{
+.signin-input,.login-input,.blog-input{
     /* border: 1px solid; */
     display: flex;
     flex-wrap: wrap;
@@ -176,11 +181,14 @@ label{
 
 button{
     width: 90px;
-    height: 30px;
+    height: 40px;
     border-radius: 20px;
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
+}
+button:hover{
+    scale: 1.1;
 }
 #i-input{
     cursor: pointer;
@@ -196,24 +204,21 @@ button{
     display: flex;
     flex-direction: column;
     width:100%;
+    /* display: none; */
 }
 .writing{
     /* width:100%; */
-    max-height: 300px;
-    overflow-y:scroll;
+    height: 300px;
+    /* overflow-y:scroll; */
     border: 5px solid grey;
     border-radius: 30px;
-    display: grid;
-    grid-template-columns: auto auto;
+    display: flex;
+    /* flex-wrap: wrap; */
     margin: 20px;
     column-gap: 5px;
-    /* flex-wrap: wrap; */
-
-    /* justify-content:center; */
-    /* align-items: center; */
 }
 .text{
-    /* width:60%; */
+    width:calc(100vw - 450px);
     /* border: 2px solid; */
     border-radius: 25px;
     padding: 15px;
@@ -221,26 +226,50 @@ button{
     background-color:black;
     opacity: 0.7;
     color: white;
-    /* max-height: 300px; */
-    /* overflow-y: hidden; */
+    height:270px;
+    /* text-wrap: wrap; */
+    overflow-y:scroll;
+    overflow-x: hidden;
+    white-space: normal;
+    word-wrap: break-word;
 }
-.img{
-    max-width:450px;
-    min-width: 350px;
-    /* max-height:auto; */
-    /* background-color: beige; */
-    border-radius: 25px;
-    object-fit:cover;
-    
-    /* background-image: url(images/pexels-photo-1676581.webp); */
+.text::-webkit-scrollbar{
+    width: 10px;
     /* height: 200px; */
+    /* background-color:grey ; */
+    border-radius: 40px;
+}
+
+.img{
+    width:450px;
+    /* min-width: 350px; */
+    height:300px;
+    object-fit:cover;
+    position: sticky;
+    top: 0;
 }
 img{
-    max-width:inherit;
-    min-height: inherit;
+    width:inherit;
+    height: inherit;
     border-radius: 25px;
-    /* max-height: inherit; */
-    /* object-fit: cover; */
-    aspect-ratio:inherit;
 
+}
+
+
+textarea{
+    width: 250px;
+    height: 70px;
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 15px;
+    font-weight: 700;
+    border: 2px solid grey;
+    border-radius: 20px;
+}
+#blog-submit{
+    height: 40px;
+    margin:20px ;
+}
+#add-blog{
+    display: none;
 }

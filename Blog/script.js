@@ -21,7 +21,8 @@ document.getElementById("cross-login").addEventListener("click",() =>{
 document.getElementById("cross-signin").addEventListener("click",() =>{
     document.getElementById("signin").style.display="none";
     clearInputs();
-    document.getElementById("span").style.display="none";    document.getElementById("content").style.display="block";
+    document.getElementById("span").style.display="none";
+    document.getElementById("content").style.display="block";
 })
 
 let login = [];

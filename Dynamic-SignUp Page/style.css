@@ -1,0 +1,123 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    /* display: flex;
+    justify-content: center;
+    align-items:center; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url("4k-minimalist-mountains-9oitratl6gd996za.jpg");
+    /* background:rgb(18, 14, 14); */
+}
+#container{
+    height: 400px;
+    width: 400px;
+    border: 2px solid black;
+    border-radius: 20px;
+    background-color: #8888bb;
+    opacity: 0.8;
+    box-shadow: 10px 10px 9px   rgb(23, 16, 16);
+    /* background: rgba(237, 228, 228, 0.7); */
+	/* -webkit-backdrop-filter: blur(50px); */
+	/* backdrop-filter: blur(100px);  */
+}
+#move{
+    width:inherit;
+    height: 60px;
+    /* border: 1px solid blue; */
+    display: flex;
+    justify-content:space-between;
+    /* padding: 10px; */
+}
+.login{
+    text-align: center;
+    font-size: 38px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color:rgb(21, 21, 77);
+}
+#form{
+    width: inherit;
+    height: 340px;
+    /* border: 1px solid red; */
+    /* text-align: center; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+#next,#prev{
+    width: 65px;
+    height: 30px;
+    /* border: 1px solid white; */
+    border-radius: 20px;
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+    font-weight: 900;
+    cursor: pointer;
+    color: rgb(12, 11, 125);
+    margin:2px 3px 0px 0px;
+}
+#prev:hover,#next:hover{
+    /* border: 2px solid white; */
+    border-radius: 30px;
+    scale: 1.1;
+    /* color: white; */
+    /* background: #ae3d3d; */
+}
+.input{
+    visibility: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    text-align: center;
+}
+.btn{
+    visibility: hidden;
+    margin-top: 150px;
+    height: 50px;
+    width: 100px;
+    color: black;
+    font-size: 15px;
+    font-weight: 700;
+    border: 2px solid rgb(25, 14, 14);
+    border-radius: 20px;
+}
+.btn:hover{
+    scale: 1.1;
+    background-color: greenyellow;
+    border: 2px solid rgb(11, 172, 33);
+}
+input{
+    width: 300px;
+    height: 35px;
+    border: 2px solid rgb(10, 4, 96);
+    border-radius: 10px;
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 3px;
+    text-align: center;
+}
+input:hover{
+    scale: 1.1;
+}
+label{
+    margin-left:10px;
+    font-size: 20px;
+    font-weight: 700;
+    color: black;
+    letter-spacing: 1px;
+    /* text-align: center; */
+}

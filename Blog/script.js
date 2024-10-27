@@ -11,6 +11,13 @@ document.getElementById("log").addEventListener("click",() =>{
     });
 })
 
+document.getElementById("opnpg").addEventListener("click",() => {
+    document.getElementById("add-blog").style.display="none";
+    document.getElementById("content").style.display="block";
+    document.getElementById("signin").style.display="none";
+    document.getElementById("login").style.display="none";
+})
+
 document.getElementById("cross-login").addEventListener("click",() =>{
     document.getElementById("login").style.display="none";
     clearInputs();
